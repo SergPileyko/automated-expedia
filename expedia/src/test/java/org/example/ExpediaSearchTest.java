@@ -25,14 +25,7 @@ public class ExpediaSearchTest extends BaseTest {
 
         driver.get(EXPEDIA_FLIGHTS_URL);
         expediaFlightsPage = new ExpediaFlightsPage(driver);
-        //!!!!!!
-        try {
-            Thread.sleep(70000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        //!!!!!!
-
+        
         expediaFlightsPage
                 .inputDepartureAirport(LEAVING_FROM_AIRPORT_CODE)
                 .inputGoingToAirport(GOING_TO_AIRPORT_CODE)
